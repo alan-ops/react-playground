@@ -1,13 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
+import People from './People';
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <h2>Hello World</h2>
-      </div>
-    );
-  }
-}
+const App = () => {
+  return <People list={['Alan', 'Thaís']} />;
+};
 
 export default App;
