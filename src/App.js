@@ -13,6 +13,7 @@ class App extends Component {
     // contexto do 'this' refere ao componente App
     this.clickHandler = this.clickHandler.bind(this);
     this.changeHandler = this.changeHandler.bind(this);
+    this.keyHandler = this.keyHandler.bind(this);
   }
 
   changeHandler(e) {
@@ -29,6 +30,12 @@ class App extends Component {
     });
   }
 
+  keyHandler(e) {
+    if (e.key === 'Enter') {
+      this.clickHandler();
+    }
+  }
+
   render() {
     return (
       <div>
@@ -37,6 +44,7 @@ class App extends Component {
         <input
           type="text"
           onChange={this.changeHandler}
+          onKeyUp={this.keyHandler}
           value={this.state.name}
         />
         <button onClick={this.clickHandler}>Adicionar</button>
