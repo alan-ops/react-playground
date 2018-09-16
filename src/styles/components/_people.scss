@@ -1,0 +1,15 @@
+.people {
+  &__list {
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin: 1rem -0.5rem;
+  }
+
+  &__item {
+    display: block;
+    padding: 0 0.5rem;
+  }
+}

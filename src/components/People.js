@@ -5,15 +5,17 @@ const People = props => {
 
   if (props.list && props.list.length > 0) {
     people = (
-      <ul>
+      <ul className="people__list">
         {props.list.map((person, index) => (
-          <li key={index}>{person}</li>
+          <li className="people__item" key={index}>
+            {person}
+          </li>
         ))}
       </ul>
     );
   }
 
-  return <div>{people}</div>;
+  return <div className="people">{people}</div>;
 };
 
 export default People;
