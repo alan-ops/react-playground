@@ -1,13 +1,19 @@
 import React from 'react';
 
 const People = props => {
-  return (
-    <ul>
-      {props.list.map(person => (
-        <li key={person}>{person}</li>
-      ))}
-    </ul>
-  );
+  let people = <p>Nenhuma pessoa adicionada</p>;
+
+  if (props.list && props.list.length > 0) {
+    people = (
+      <ul>
+        {props.list.map((person, index) => (
+          <li key={index}>{person}</li>
+        ))}
+      </ul>
+    );
+  }
+
+  return <div>{people}</div>;
 };
 
 export default People;
